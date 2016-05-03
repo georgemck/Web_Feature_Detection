@@ -44,18 +44,18 @@ var Dolby = Dolby || {};
                 Dolby.supportDDPlus = true;            
         }
 
-        // Microsoft Windows 10 Phone
-        if( navigator.userAgent.indexOf('Windows Phone 10') != -1 
-            ) {
-            Dolby.supportDDPlus = true;
-        } 
-
         // Microsoft Windows 10 EDGE Browser
         if( navigator.userAgent.indexOf('Edge') != -1 
             ) {
             Dolby.supportDDPlus = true;
         } 
-    
+
+        // Microsoft Windows 10 Phone, handle this false positive
+        if( navigator.userAgent.indexOf('Windows Phone 10') != -1 
+            ) {
+            Dolby.supportDDPlus = false;
+        } 
+
     }
 
     // method to return whether Dolby Digital Plus is supported
