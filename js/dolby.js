@@ -23,7 +23,7 @@ var Dolby = Dolby || {};
     // check to see if ec-3 (Dolby Digital Plus) can be played
     if (audio.canPlayType('audio/mp4;codecs="ec-3"') != '') {
 
-        // iPhone/Pod/Pad iOS 9.3 on Safari 9x Browser     
+        // iPhone/Pod/Pad iOS 10 on Safari 10 Browser     
         if( ( 
                 navigator.userAgent.indexOf('CPU iPhone OS 10_0') != -1 
                 || navigator.userAgent.indexOf('CPU OS 10_0') != -1 
@@ -39,7 +39,7 @@ var Dolby = Dolby || {};
 		// NOte: OS X 10_11 (El Capitan) and Safari 9 support DD+ too, except there were some issues so we're leaving that combination out
         if( navigator.userAgent.indexOf('Mac OS X 10_12') != -1
             && navigator.userAgent.indexOf('Safari') != -1 
-            && navigator.userAgent.indexOf('Version/10') != -1 
+            && navigator.userAgent.indexOf('Version/10') != -1
             ) {
                 // everything checks out so we can play Dolby Digital Plus
                 Dolby.supportDDPlus = true;            
