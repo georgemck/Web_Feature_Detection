@@ -1,6 +1,6 @@
 # Web_Feature_Detection
 Version 1.1.0
-December 1, 2015
+September 12, 2016
 
 ##################################################
 
@@ -9,8 +9,10 @@ This is sample code to help Web Developers feature detect for Dolby Digital Plus
 Step 1
 ==========================
 Add the following script to your html page:
- 
-<script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/dolbydeveloper/1.1.0/js/dolby.min.js"></script>
+
+```
+<script src="https://s3-us-west-1.amazonaws.com/dolbydeveloper/1.1.0/js/dolby.min.js"></script>
+```
 
 Step 2
 ==========================
@@ -18,14 +20,18 @@ Use the following method to check if Dolby Digital Plus is supported.  It will r
 
 Example code 1:
 ---------------
+```
 var ddplus = Dolby.checkDDPlus();
+```
 
 Example code 2:
 ---------------
-if( Dolby.checkDDPlus === true ){
+```
+if( Dolby.checkDDPlus() === true ){
 	// Dolby Digital Plus supported
 	// code dependent on Dolby Digital Plus here
 }
+```
 
 ##################################################
 
